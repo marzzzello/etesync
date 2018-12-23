@@ -31,5 +31,5 @@ Create a container running standalone django server (not recommended for product
 
 ## Advanced Customization
 
-Further customization is possible by mounting your own settings file at `/etesync/etesync_server/settings.py`, the defult can be found here: [settings.py](https://github.com/victor-rds/docker-etesync/blob/master/confs/settings.py)
+Further customization is possible by mounting your own settings file at `/etesync/etesync_server/settings.py`, the defult can be found here: [settings.py](https://github.com/marzzzello/etesync/blob/master/src/settings.py)
 
