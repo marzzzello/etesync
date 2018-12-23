@@ -1,23 +1,10 @@
 # ETESync Docker Images
 
-Docker image for [ETESync](https://www.etesync.com/) based on the [server-skeleton](https://github.com/etesync/server-skeleton) repository.
-
-## Tags
-
-This build follows some tags of the official Python 3 hub:
-
-- Debian:
-  - [`latest` (debian/latest/Dockerfile)](https://github.com/victor-rds/docker-etesync/blob/master/debian/latest/Dockerfile)
-  - [`slim` (debian/slim/Dockerfile)](https://github.com/victor-rds/docker-etesync/blob/master/debian/slim/Dockerfile)
-  - [`stretch` (debian/stretch/Dockerfile)](https://github.com/victor-rds/docker-etesync/blob/master/debian/slim-stretch/Dockerfile)
-  - [`slim-stretch` (debian/slim-stretch/Dockerfile)](https://github.com/victor-rds/docker-etesync/blob/master/debian/slim-stretch/Dockerfile)
-- Alpine:
-  - [`alpine3.6` (alpine/alpine3.6/Dockerfile)](https://github.com/victor-rds/docker-etesync/blob/master/alpine/alpine3.6/Dockerfile)
-  - [`alpine3.7` (alpine/alpine3.7/Dockerfile)](https://github.com/victor-rds/docker-etesync/blob/master/alpine/alpine3.6/Dockerfile)
+Docker image for [ETESync](https://www.etesync.com/) based on the [docker-etesync](https://github.com/victor-rds/docker-etesync) repository.
 
 ## Usage
 
-```docker run  -d -e SUPER_USER=admin -e SUPER_PASS=changeme -p 80:8000 -v /path/on/host:/data victorrds/etesync```
+```docker-compose up -d```
 
 Create a container running standalone django server (not recommended for production).
 
