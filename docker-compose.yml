@@ -1,10 +1,9 @@
-version: '2.3'
+version: '3'
 
 services:
   etesync:
-    container_name: etesync
-    hostname: etesync
-    #image: victorrds/etesync:latest
+    container_name: ${CONTAINER_NAME:-etesync}
+    hostname: ${CONTAINER_NAME:-etesync}
     build: src
     expose:
       - 8000
@@ -12,19 +11,21 @@ services:
       - ./data:/data
       - ./etestatic:/var/www/static:rw
     environment:
-      - SERVER=uwsgi
-      - SUPER_USER=admin
-      - SUPER_PASS=NI0LHghaDm9GB9dZRmUbmgG2VwtCMHvB7sBOjI1Q4e
+      - SERVER=${SERVER:-uwsgi}
+      - SUPER_USER=${SUPER_USER:-admin}
+      - SUPER_PASS=${SUPER_PASS:-admin}
+      - TZ=${TZ:-CET}
     network_mode: "bridge"
   nginx:
     container_name: nginx
     image: nginx:latest
     ports:
-      - 8443:443
-      - 8080:80
+      - ${PORT}:80
     volumes:
       - ./etestatic:/var/www/static:ro
       - ./src/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    environment:
+      - TZ=${TZ:-CET}
     links:
-      - etesync
+      - ${CONTAINER_NAME:-etesync}
     network_mode: "bridge"

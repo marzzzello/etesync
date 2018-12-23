@@ -19,6 +19,8 @@ if [ ! -f "/data/db.sqlite3" ]; then
   $ETESYNC_PATH/manage.py migrate
   chown -R $PUID:$PGID $DATA_PATH
 
+  $ETESYNC_PATH/manage.py collectstatic
+
   if [ "$SUPER_USER" -a "$SUPER_PASS" ]; then
     echo "from django.contrib.auth.models import User; User.objects.create_superuser('$SUPER_USER' , '$SUPER_EMAIL', '$SUPER_PASS')" | python manage.py shell
   fi
