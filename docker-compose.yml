@@ -5,7 +5,7 @@ services:
     container_name: etesync
     hostname: etesync
     #image: victorrds/etesync:latest
-    build: .
+    build: src
     expose:
       - 8000
     volumes:
