@@ -5,6 +5,7 @@ Docker-Compose config for [ETESync](https://www.etesync.com/) based on the [dock
 ## Usage
 
 ```docker-compose up -d --build```
+
 You can then login under under `http://yourhostname/admin` and add users.
 
 ## Environment Variables
