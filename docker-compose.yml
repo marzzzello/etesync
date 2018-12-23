@@ -24,7 +24,7 @@ services:
       - 8080:80
     volumes:
       - ./etestatic:/var/www/static:ro
-      - ./nginx-example.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./src/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     links:
       - etesync
     network_mode: "bridge"
