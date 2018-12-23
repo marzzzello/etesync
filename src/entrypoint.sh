@@ -15,6 +15,7 @@ fi
 
 if [ ! -f "/data/db.sqlite3" ]; then
   #First run
+
   $ETESYNC_PATH/manage.py migrate
   chown -R $PUID:$PGID $DATA_PATH
 
