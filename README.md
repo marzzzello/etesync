@@ -1,6 +1,6 @@
-# ETESync Docker Images
+# ETESync Docker-Compose
 
-Docker image for [ETESync](https://www.etesync.com/) based on the [docker-etesync](https://github.com/victor-rds/docker-etesync) repository.
+Docker-Compose config for [ETESync](https://www.etesync.com/) based on the [docker-etesync](https://github.com/victor-rds/docker-etesync) repository.
 
 ## Usage
 
