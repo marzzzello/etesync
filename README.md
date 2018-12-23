@@ -4,7 +4,7 @@ Docker image for [ETESync](https://www.etesync.com/) based on the [docker-etesyn
 
 ## Usage
 
-```docker-compose up -d```
+```docker-compose up -d --build```
 
 Create a container running standalone django server (not recommended for production).
 
